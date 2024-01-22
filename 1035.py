@@ -7,6 +7,7 @@
 
 #Saída
 #Mostre a respectiva mensagem após a validação dos valores.
+#ops: a,b,c,d = map(int,input().split()) versão aceita no juíz online 
 
 A = int(input())
 B = int(input())
