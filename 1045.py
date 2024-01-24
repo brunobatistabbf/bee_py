@@ -13,6 +13,7 @@
 #Saída
 #Imprima todas as classificações do triângulo especificado na entrada.
 #a, b, c = map(float,input().split())
+
 a = float(input())
 b = float(input())
 c = float(input())
