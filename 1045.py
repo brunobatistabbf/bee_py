@@ -14,8 +14,6 @@
 #Imprima todas as classificações do triângulo especificado na entrada.
 #a, b, c = map(float,input().split())
 
-from numpy import sort, true_divide
-
 a = float(input())
 b = float(input())
 c = float(input())
