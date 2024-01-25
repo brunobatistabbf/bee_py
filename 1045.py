@@ -14,15 +14,14 @@
 #Imprima todas as classificações do triângulo especificado na entrada.
 #a, b, c = map(float,input().split())
 
-from numpy import sort
+from numpy import sort, true_divide
 
 a = float(input())
 b = float(input())
 c = float(input())
 
 lista_ordenada = [a, b, c]
-
-print(lista_ordenada)
+lista_ordenada.sort(reverse=True)
 
 def triangle_definition(lista_ordenada):
     a1 = lista_ordenada[0]
@@ -30,16 +29,17 @@ def triangle_definition(lista_ordenada):
     c3 = lista_ordenada[2]
     if (a1 >= (b2 + c3)):
         print("NAO FORMA TRIANGULO")
-    if((a1**2) == ((b2**2)+(c3**2))):
-        print("TRIANGULO RETANGULO")
-    if((a1**2) > ((b2**2)+(c3**2))):
-        print("TRIANGULO OBTUSANGULO")
-    if((a1**2) < (b2**2)+(c3**2)):
-        print("TRIANGULO ACUTANGULO")
-    if a1 == b2 == c3:
-        print("TRIANGULO EQUILATERO")
-    if (a1 == b2 != c3) or (a1 == c3 != b2) or (b2 == c3 != a1):
-        print("TRIANGULO ISOSCELES")
+    else:
+        if((a1**2) == ((b2**2)+(c3**2))):
+            print("TRIANGULO RETANGULO")
+        if((a1**2) > ((b2**2)+(c3**2))):
+            print("TRIANGULO OBTUSANGULO")
+        if((a1**2) < (b2**2)+(c3**2)):
+            print("TRIANGULO ACUTANGULO")
+        if a1 == b2 == c3:
+            print("TRIANGULO EQUILATERO")
+        if (a1 == b2 != c3) or (a1 == c3 != b2) or (b2 == c3 != a1):
+            print("TRIANGULO ISOSCELES")
 
 if (a > 0) or (b > 0) or (c > 0):
     triangle_definition(lista_ordenada)
