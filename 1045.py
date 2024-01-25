@@ -14,24 +14,32 @@
 #Imprima todas as classificações do triângulo especificado na entrada.
 #a, b, c = map(float,input().split())
 
+from numpy import sort
+
 a = float(input())
 b = float(input())
 c = float(input())
 
-def triangle_definition(a, b, c):
-    if (a >= (b + c)):
+lista_ordenada = [a, b, c]
+
+print(lista_ordenada)
+
+def triangle_definition(lista_ordenada):
+    a1 = lista_ordenada[0]
+    b2 = lista_ordenada[1]
+    c3 = lista_ordenada[2]
+    if (a1 >= (b2 + c3)):
         print("NAO FORMA TRIANGULO")
-    if((a**2) == ((b**2)+(c**2))):
+    if((a1**2) == ((b2**2)+(c3**2))):
         print("TRIANGULO RETANGULO")
-    if((a**2) > ((b**2)+(c**2))):
+    if((a1**2) > ((b2**2)+(c3**2))):
         print("TRIANGULO OBTUSANGULO")
-    if((a**2) < ((b**2)+(c**2))):
+    if((a1**2) < (b2**2)+(c3**2)):
         print("TRIANGULO ACUTANGULO")
-    if a == b == c:
+    if a1 == b2 == c3:
         print("TRIANGULO EQUILATERO")
-    if (a == b) or (a == c) or (b == c):
+    if (a1 == b2 != c3) or (a1 == c3 != b2) or (b2 == c3 != a1):
         print("TRIANGULO ISOSCELES")
 
-
 if (a > 0) or (b > 0) or (c > 0):
-    triangle_definition(a, b, c)
+    triangle_definition(lista_ordenada)
