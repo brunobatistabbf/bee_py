@@ -1,18 +1,18 @@
-#horasIncial, horasFinal = map(int(input().split()))
+#horasInicial, minutosInicial, horasFinal, minutosFinal = map(int(input().split()))
 
-horasIncial = int(input())
+horasInicial = int(input())
+minutosInicial = int(input())
 horasFinal = int(input())
+minutosFinal = int(input())
 
-def horas_jogando(horasInicial, horasFinal):
-    if (horasIncial == horasFinal):
-        print("O JOGO DUROU 24 HORA(S)")
-    else:
-        if horasInicial > horasFinal:
-            aux = 24 - horasInicial
-            horasTotal = aux + horasFinal
-            print(f"O JOGO DUROU %d HORA(S)"%horasTotal)
-        elif horasFinal > horasIncial:
-            horasTotal = horasFinal - horasIncial
-            print(f"O JOGO DUROU %d HORA(S)"%horasTotal)
 
-horas_jogando(horasIncial, horasFinal)
+def horas_jogando(horasInicial,minutosInicial, horasFinal,minutosFinal):
+    diferenca = (((horasFinal * 60) + minutosFinal) - ((horasInicial * 60) + minutosInicial))
+    if diferenca <= 0:
+        diferenca += 24*60
+    
+    horas = diferenca // 60
+    minutos = diferenca % 60
+    print(f"O JOGO DUROU {horas} HORA(S) E {minutos} MINUTO(S)")
+        
+horas_jogando(horasInicial,minutosInicial, horasFinal,minutosFinal)
