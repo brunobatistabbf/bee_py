@@ -13,7 +13,7 @@ horasIncial = int(input())
 horasFinal = int(input())
 
 def horas_jogando(horasInicial, horasFinal):
-    if (horasIncial == 0) and (horasFinal == 0):
+    if (horasIncial == horasFinal):
         print("O JOGO DUROU 24 HORA(S)")
     else:
         if horasInicial > horasFinal:
