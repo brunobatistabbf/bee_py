@@ -22,12 +22,15 @@ def imposto_de_renda(salario):
         if (salario >= 0) and (salario <= 2000):
             print("Isento")
         elif (salario >= 2000.01) and (salario <= 3000):
+            salario - 2000.01
             reajuste =+ salario * 0.08
             print(f"R$ {reajuste:.2f}")
         elif (salario >= 3000.01 ) and (salario <= 4500):
+            salario - 3000.01
             reajuste =+ salario * 0.18
             print(f"R$ {reajuste:.2f}")
         elif (salario > 4500):
+            salario - 4500
             reajuste =+ salario * 0.28
             print(f"R$ {reajuste:.2f}")
         else:

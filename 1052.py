@@ -1,30 +1,29 @@
 mouth = int(input())
 
 def definir_mes(mouth):
-    match mouth:
-        case 1:
+        if mouth ==  1:
             print("January")
-        case 2:
+        elif mouth ==  2:
             print("February")
-        case 3:
+        elif mouth ==  3:
             print("March")
-        case 4:
+        elif mouth ==  4:
             print("April")
-        case 5:
+        elif mouth ==  5:
             print("May")
-        case 6:
+        elif mouth ==  6:
             print("June")
-        case 7:
+        elif mouth ==  7:
             print("July")
-        case 8:
+        elif mouth ==  8:
             print("August")
-        case 9:
+        elif mouth ==  9:
             print("September")
-        case 10:
-            print("Octuber")
-        case 11:
+        elif mouth ==  10:
+            print("October")
+        elif mouth ==  11:
             print("November")
-        case 12:
+        elif mouth ==  12:
             print("December")
         
 
