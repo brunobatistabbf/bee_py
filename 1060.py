@@ -7,7 +7,6 @@
 #Saída
 #Imprima uma mensagem dizendo quantos valores positivos foram lidos.
 
-#a, b, c, d, e, f = map(int,input().split())
 a = float(input())
 b = float(input())
 c = float(input())
@@ -16,8 +15,6 @@ e = float(input())
 f = float(input())
 
 valores = a, b, c, d, e, f
-print(valores)
-
 
 def valores_positivos(valores):
     valores_positivos = 0
