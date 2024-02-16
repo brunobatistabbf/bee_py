@@ -14,6 +14,7 @@
 #Z segundo(s)
 #Obs: Considere que o evento do caso de teste para o problema tem duração mínima de 1 minuto.
 
+#parte inicial
 dia_word_string, dia_number_string = list(input().split(" "))
 dia_number =  int(dia_number_string)
 horas, minutos, segundos = list(input().split(" : "))
@@ -21,4 +22,45 @@ horas_number = int(horas)
 minutos_number = int(minutos)
 segundos_number = int(segundos)
 
-print(horas_number, minutos_number, segundos_number)
+#parte final
+dia_word_string_final, dia_number_string_final = list(input().split(" "))
+dia_number_final =  int(dia_number_string_final)
+horasf, minutosf, segundosf = list(input().split(" : "))
+horas_numberf = int(horasf)
+minutos_numberf = int(minutosf)
+segundos_numberf = int(segundosf)
+
+def calcular_evento_tempo(dia_number, horas_number, minutos_number, segundos_number, dia_number_final, horas_numberf, minutos_numberf, segundos_numberf):
+    if horas_numberf < horas_number:
+        dia = dia_number_final - dia_number - 1
+    else:
+        dia = dia_number_final - dia_number
+
+    hora = (horas_numberf - horas_number) % 24
+
+    
+    if hora < 0:
+        hora = hora + 24
+        dia = dia - 1
+    minuto = minutos_numberf - minutos_number
+    
+    if minuto < 0:
+        minuto = minuto + 60
+        hora = hora - 1
+    segundos = segundos_numberf - segundos_number
+    
+    if segundos < 0:
+        segundos = segundos + 60
+        minuto = minuto - 1
+        
+    if dia < 0:
+        dia = 0 
+        
+    print(f"{dia} dia(s)")
+    print(f"{hora} hora(s)")
+    print(f"{minuto} minuto(s)")
+    print(f"{segundos} segundo(s)")
+
+
+calcular_evento_tempo(dia_number, horas_number, minutos_number, segundos_number, dia_number_final, horas_numberf, minutos_numberf, segundos_numberf)
+
